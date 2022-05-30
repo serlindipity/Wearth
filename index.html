@@ -1,270 +1,341 @@
+<!-- HTML File for Wearth website app -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Allows the website to be responsive within the small devices-->
+    <link rel="shortcut icon" href="img/Wearth_icon.ico" type="image/x-icon">  <!--  _               -->
+    <link rel="icon" href="img/Wearth_icon.ico" type="image/x-icon">      <!--       _| Page icons   -->
 
-        <link rel="shortcut icon" href="img/Wearth_icon.ico" type="image/x-icon">
-        <link rel="icon" href="img/Wearth_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- CSS link for the slider -->
+    <link rel="stylesheet" href="css/Stylesheet.css" type="text/css"> <!-- CSS link -->
+    <title>Wearth</title> <!-- Title for the Website -->
+</head>
+<body>
+    <!-- For this website, I wanted the header to contain my app name and my app description -->
+    <header>
+        <!-- I used h1 to output the text name of my website -->
+        <h1>WEARTH</h1> <!-- name of my app -->
+        <!-- I used p to output the paragraph for my app's description -->
+        <p>
+            We, the Earth's protector, need to raise awareness in saving our planet. We, the Earth's voice, need to shout to  <!--  ___                      -->
+            all the nations that our habitat is in danger. Let's save the Earth, because we are the Earth, and we are worth   <!--     |   app description   -->
+            saving.                                                                                                           <!--  ___|                     -->
+        </p>
+    </header>
 
-        <!-- CSS for the slider -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-        <link rel="stylesheet" href="css/Stylesheet.css" type="text/css">
-
-        <!-- Title for the Website -->
-        <title>Wearth</title>
-    </head>
-    <body>
-        <header>
-            <h1>WEARTH</h1>
-            <p>
-                We, the Earth's protector, need to raise awareness in saving our planet. We, the Earth's voice, need to shout to 
-                all the nations that our habitat is in danger. Let's save the Earth, because we are the Earth, and we are worth 
-                saving.
-            </p>
-        </header>
-       
-        <div class="about_us">
-            <h3>A LITTLE SOMETHING ABOUT US</h3>
-            <img src="img/did_you_know.png">
-
-            <div class="fact fact_1 left">
-                <h2>ONE</h2>
-                <div class="fact_info">
-                    <h5>There will be more plastic in our oceans than fish by 2050</h5>
-                    <p>It's estimated there are around 3,500,000,000,000 fish currently in our oceans (that's a lot of zeros!). So, can you try and imagine just how much plastic that means there could be in the oceans by 2050…</p>
-                </div>
-            </div>
-
-            <div class="fact fact_2 right">
-                <h2>TWO</h2>
-                <div class="fact_info">
-                    <h5>About eight million tonnes of plastic are dumped in the ocean each year.</h5>
-                    <p>About eight million tonnes of plastic are dumped in the ocean each year - that's as heavy as 632,411 London buses</p>
-                </div>
-            </div>
-
-            <div class="fact fact_3 left">
-                <h2>THREE</h2>
-                <div class="fact_info">
-                    <h5>The global temperature has increased by about 1°C in the last 100 years.</h5>
-                    <p>The global temperature has increased by about 1°C in the last 100 years. For many scientists, this is proof that global warming is taking place.</p>
-                </div>
-            </div>
-
-            <div class="fact fact_4 right">
-                <h2>FOUR</h2>
-                <div class="fact_info">
-                    <h5>Sea levels have risen by nearly 10cm in the last 25 years. </h5>
-                    <p>Sea levels have risen by nearly 10cm in the last 25 years, and the global mean sea level has risen about 8-9 inches (21-24 centimetres) since 1880! Many experts say that the city of Venice could be completely underwater as early as the year 2100. This is because the Mediterranean sea is projected to rise over four feet by then!</p>
-                </div>
-            </div>
-
-            <div class="fact fact_5 left">
-                <h2>FIVE</h2>
-                <div class="fact_info">
-                    <h5>Scientists believe that up to 50% of the world's species will be extinct by the end of this century.</h5>
-                    <p>Scientists believe that up to 50% of the world's species will be extinct by the end of this century. Many believe that human activity is the main cause.
-                    </p>
-                </div>
-            </div>
-
-            <div class="fact fact_6 right">
-                <h2>SIX</h2>
-                <div class="fact_info">
-                    <h5>Approximately 83% of the earth's land surface has been affected by human activity, threatening plant and animal species.</h5>
-                    <p>About eight million tonnes of plastic are dumped in the ocean each year - that's as Approximately 83% of the earth's land surface has been affected by human activity, threatening plant and animal species - this is due to things like deforestation and unsustainable harvesting of the Earth's resources. as 632,411 London buses!</p>
-                </div>
-            </div>
-
-            <div class="fact fact_7 left">
-                <h2>SEVEN</h2>
-                <div class="fact_info">
-                    <h5>Approximately 25% of the world's coral reefs have been irreversibly destroyed.</h5>
-                    <p>Approximately 25% of the world's coral reefs have been irreversibly destroyed. This is due to pollution, overfishing, destructive fishing practices using dynamite or cyanide, collecting live corals for the aquarium market, mining coral for building materials, and a warming climate.</p>
-                </div>
-            </div>
-
-            <div class="fact fact_8 right">
-                <h2>EIGHT</h2>
-                <div class="fact_info">
-                    <h5>Deforestation in south-east Asia has resulted in the loss of up to 80% of natural forest.</h5>
-                    <p>Deforestation in south-east Asia has resulted in the loss of up to 80% of natural forest. This has led to a decline in the Orangutan population. Environmentalists warn that these great apes could be made extinct within the next 20 years if deforestation continues.</p>
-                </div>
-            </div>
-
-            <div class="fact fact_9 left">
-                <h2>NINE</h2>
-                <div class="fact_info">
-                    <h5>Humans send over 2 million tonnes of waste to landfills each year.</h5>
-                    <p>Humans send over 2 million tonnes of waste to landfills each year. There are 7.9 billion people on earth, meaning that on average each person will send 3,950 tonnes of waste to landfills each year. That's the equivalent of around 790 elephants!</p>
-                </div>
-            </div>
-
-            <div class="fact fact_10 right">
-                <h2>TEN</h2>
-                <div class="fact_info">
-                    <h5>The last 7 years have been the warmest on record</h5>
-                    <p>“The last seven years have been the warmest seven years on record, typifying the ongoing and dramatic warming trend,” said Goddard Institute for Space Studies (GISS) Director Gavin Schmidt. “Whether one year is a record or not is not really that important — the important things are long-term trends. With these trends, and as the human impact on the climate increases, we have to expect that records will continue to be broken.”</p>
-                </div>
+    <!-- For my 1st div for this website, I wanted it to be the about us page where all the information about my app will be contained -->
+    <div class="about_us">
+        <!-- about us container -->
+        <!-- I used h3 to output the text title or intro for this div -->
+        <h3>A LITTLE SOMETHING ABOUT US</h3> <!-- text title or intro for this div -->
+        <img src="img/did_you_know.png"> <!-- I used img to output and contain this image -->
+        <!-- This div is to contain the contents of fact #1: fact no. & fact info -->
+        <div class="fact fact_1 left">
+            <!-- fact_1 is for numbering (css purposes), left is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>ONE</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>There will be more plastic in our oceans than fish by 2050</h5> <!-- fact topic -->
+                <p>It's estimated there are around 3,500,000,000,000 fish currently in our oceans (that's a lot of zeros!). So, can you try and imagine just how much plastic that means there could be in the oceans by 2050…</p> <!-- fact topic's description -->
             </div>
         </div>
 
+        <!-- This div is to contain the contents of fact #2: fact no. & fact info -->
+        <div class="fact fact_2 right">
+            <!-- fact_2 is for numbering (css purposes), right is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>TWO</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>About eight million tonnes of plastic are dumped in the ocean each year.</h5> <!-- fact topic -->
+                <p>About eight million tonnes of plastic are dumped in the ocean each year - that's as heavy as 632,411 London buses</p> <!-- fact topic's description -->
+            </div>
+        </div>
 
-        <div class="mission">
-            <h3>THAT'S WHY WE MADE IT OUR MISSION TO</h3>
+        <!-- This div is to contain the contents of fact #3: fact no. & fact info -->
+        <div class="fact fact_3 left">
+            <!-- fact_3 is for numbering (css purposes), left is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>THREE</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>The global temperature has increased by about 1°C in the last 100 years.</h5> <!-- fact topic -->
+                <p>The global temperature has increased by about 1°C in the last 100 years. For many scientists, this is proof that global warming is taking place.</p> <!-- fact topic's description -->
+            </div>
+        </div>
 
-            <div class="mission_swiper">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
+        <!-- This div is to contain the contents of fact #4: fact no. & fact info -->
+        <div class="fact fact_4 right">
+            <!-- fact_4 is for numbering (css purposes), right is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>FOUR</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Sea levels have risen by nearly 10cm in the last 25 years. </h5> <!-- fact topic -->
+                <p>Sea levels have risen by nearly 10cm in the last 25 years, and the global mean sea level has risen about 8-9 inches (21-24 centimetres) since 1880! Many experts say that the city of Venice could be completely underwater as early as the year 2100. This is because the Mediterranean sea is projected to rise over four feet by then!</p> <!-- fact topic's description -->
+            </div>
+        </div>
 
-                        <div class="swiper-slide">
+        <!-- This div is to contain the contents of fact #5: fact no. & fact info -->
+        <div class="fact fact_5 left">
+            <!-- fact_5 is for numbering (css purposes), left is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>FIVE</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Scientists believe that up to 50% of the world's species will be extinct by the end of this century.</h5> <!-- fact topic -->
+                <p>Scientists believe that up to 50% of the world's species will be extinct by the end of this century. Many believe that human activity is the main cause.</p> <!-- fact topic's description -->
+            </div>
+        </div>
 
-                            <h1>EAR</h1>
-        
-                            <div class="mission_wrapper">
-        
-                                <img src="img/mission1.png" />
-        
-                                <div class="mission_desc">
-        
-                                    <p>
-                                    Interested in helping to save the earth through financial donations? Here are some organizations that can help you.
-                                    </p>
-        
-                                    <a>DONATE TO SAVE QUIET</a>
-                                    <a>DONATE TO FAIIRVENTURES</a>
-                                    <a>DONATE TO RIVER CLEAN UP</a>
-                                </div>
+        <!-- This div is to contain the contents of fact #6: fact no. & fact info -->
+        <div class="fact fact_6 right">
+            <!-- fact_6 is for numbering (css purposes), right is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>SIX</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Approximately 83% of the earth's land surface has been affected by human activity, threatening plant and animal species.</h5> <!-- fact topic -->
+                <p>About eight million tonnes of plastic are dumped in the ocean each year - that's as Approximately 83% of the earth's land surface has been affected by human activity, threatening plant and animal species - this is due to things like deforestation and unsustainable harvesting of the Earth's resources. as 632,411 London buses!</p> <!-- fact topic's description -->
+            </div>
+        </div>
+
+        <!-- This div is to contain the contents of fact #7: fact no. & fact info -->
+        <div class="fact fact_7 left">
+            <!-- fact_7 is for numbering (css purposes), left is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>SEVEN</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Approximately 25% of the world's coral reefs have been irreversibly destroyed.</h5> <!-- fact topic -->
+                <p>Approximately 25% of the world's coral reefs have been irreversibly destroyed. This is due to pollution, overfishing, destructive fishing practices using dynamite or cyanide, collecting live corals for the aquarium market, mining coral for building materials, and a warming climate.</p> <!-- fact topic's description -->
+            </div>
+        </div>
+
+        <!-- This div is to contain the contents of fact #8: fact no. & fact info -->
+        <div class="fact fact_8 right">
+            <!-- fact_8 is for numbering (css purposes), right is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>EIGHT</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Deforestation in south-east Asia has resulted in the loss of up to 80% of natural forest.</h5> <!-- fact topic -->
+                <p>Deforestation in south-east Asia has resulted in the loss of up to 80% of natural forest. This has led to a decline in the Orangutan population. Environmentalists warn that these great apes could be made extinct within the next 20 years if deforestation continues.</p> <!-- fact topic's description -->
+            </div>
+        </div>
+
+        <!-- This div is to contain the contents of fact #9: fact no. & fact info -->
+        <div class="fact fact_9 left">
+            <!-- fact_9 is for numbering (css purposes), left is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>NINE</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>Humans send over 2 million tonnes of waste to landfills each year.</h5> <!-- fact topic -->
+                <p>Humans send over 2 million tonnes of waste to landfills each year. There are 7.9 billion people on earth, meaning that on average each person will send 3,950 tonnes of waste to landfills each year. That's the equivalent of around 790 elephants!</p> <!-- fact topic's description -->
+            </div>
+        </div>
+
+        <!-- This div is to contain the contents of fact #10: fact no. & fact info -->
+        <div class="fact fact_10 right">
+            <!-- fact_10 is for numbering (css purposes), right is for the alignment (css purposes) -->
+            <!-- I used h2 to output the text title for this fact -->
+            <h2>TEN</h2> <!-- Fact title number -->
+            <!-- this div is for containing the fact information such as fact topic and fact topic's description -->
+            <div class="fact_info">
+                <!-- Fact info comtainer -->
+                <h5>The last 7 years have been the warmest on record</h5> <!-- fact topic -->
+                <p>“The last seven years have been the warmest seven years on record, typifying the ongoing and dramatic warming trend,” said Goddard Institute for Space Studies (GISS) Director Gavin Schmidt. “Whether one year is a record or not is not really that important — the important things are long-term trends. With these trends, and as the human impact on the climate increases, we have to expect that records will continue to be broken.”</p> <!-- fact topic's description -->
+            </div>
+        </div>
+    </div>
+
+    <!-- For this next div, I wanted it to be the mission section where all the goals and purpose of my app will be contained -->
+    <div class="mission">
+        <!-- mission div container -->
+        <!-- I used h3 to output the text title or intro for this div -->
+        <h3>THAT'S WHY WE MADE IT OUR MISSION TO</h3>
+        <!-- This div is for containing the mission swiper contents -->
+        <div class="mission_swiper">
+            <!-- mission swiper div container -->
+            <div class="swiper">
+                <!-- swiper container -->
+                <div class="swiper-wrapper">
+                    <!-- swiper wrapper container -->
+                    <!-- SWIPER SLIDE #1 -->
+                    <div class="swiper-slide">
+                        <!-- this div is used to contain swiper slide elements: Title, and the Mission wrapper -->
+                        <!-- I used h1 to output the text title for this slide -->
+                        <h1>EAR</h1> <!-- text title for the slide -->
+                        <!-- this div is to wrap this slide's image, and mission description -->
+                        <div class="mission_wrapper">
+                            <!-- mission wrapper div container -->
+                            <img src="img/mission1.png" /> <!-- image for this slide -->
+                            <!-- this div is for the mission description -->
+                            <div class="mission_desc">
+                                <!-- mission description div container -->
+                                <!-- I used p to output the paragraph for the mission's description -->
+                                <p>
+                                    Interested in helping to save the earth through financial donations? Here are some organizations that can help you. <!-- mission description paragraph -->
+                                </p>
+                                <!-- Swiper Slides buttons: (each buttons directs user to their respective links)-->
+                                <a href="https://www.quietparks.org/?gclid=Cj0KCQjwspKUBhCvARIsAB2IYuuFzG5xYqymWh3mm3JcyP1R7zf7T773XS3ck0nm_gegC93Pb0jhiq0aAidGEALw_wcB" target="_blank">DONATE TO SAVE QUIET</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="https://fairventures.org/en/donate/?gclid=Cj0KCQjwspKUBhCvARIsAB2IYuuNqmEh1D7yIod1Taq5gjPvNIDyvI8usOCpy7J9U1xkyibmPDzchLAaAuIREALw_wcB" target="_blank">DONATE TO FAIRVENTURES</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="http://river-cleanup.org/en/donate?utm_source=google&utm_medium=rsa1&utm_campaign=ad_grant_donatie_ENG_2021_12&gclid=Cj0KCQjwspKUBhCvARIsAB2IYus55lWBm6SoKotlap0uQ2wjRoG3JZSQzGqgUQ9-EUhakV7CfroLMucaAgqeEALw_wcB" target="_blank">DONATE TO RIVER CLEAN UP</a> <!-- a href allows this button to create a hyperlink to this url link -->
                             </div>
                         </div>
-        
-                        <div class="swiper-slide">
-        
-                            <h1>EARTH</h1>
-        
-                            <div class="mission_wrapper">
-        
-                                <img src="img/mission2.png" />
-        
-                                <div class="mission_desc">
-        
-                                    <p>
-                                    Want to know more about the problems that our planet is currently facing right now? Here are some good read articles! 
-                                    </p>
-        
-                                    <a>GLOBAL WARMING</a>
-                                    <a>CLIMATE ACTION</a>
-                                    <a>SAVING THE PLANET</a>
-                                </div>
+                    </div>
+
+                    <!-- SWIPER SLIDE #2 -->
+                    <div class="swiper-slide">
+                        <!-- this div is used to contain swiper slide elements: Title, and the Mission wrapper -->
+                        <!-- I used h1 to output the text title for this slide -->
+                        <h1>EARTH</h1> <!-- text title for the slide -->
+                        <!-- this div is to wrap this slide's image, and mission description -->
+                        <div class="mission_wrapper">
+                            <!-- mission wrapper div container -->
+                            <img src="img/mission2.png" /> <!-- image for this slide -->
+                            <!-- this div is for the mission description -->
+                            <div class="mission_desc">
+                                <!-- mission description div container -->
+                                <!-- I used p to output the paragraph for the mission's description -->
+                                <p>
+                                    Want to know more about the problems that our planet is currently facing right now? Here are some good read articles! <!-- mission description paragraph -->
+                                </p>
+                                <!-- Swiper Slides buttons: (each buttons directs user to their respective links)-->
+                                <a href="https://www.gale.com/open-access/global-warming" target="_blank">GLOBAL WARMING</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="https://www.un.org/climatechange?gclid=Cj0KCQjwspKUBhCvARIsAB2IYutXg39B5ninPsHtJQQUgp2ZkjFI-hFG_UokzmRclNo_prbVqe1AqOUaAjDJEALw_wcB" target="_blank">CLIMATE ACTION</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="https://hbr.org/2012/04/saving-the-planet-a-tale-of-two-strategies" target="_blank">SAVING THE PLANET</a> <!-- a href allows this button to create a hyperlink to this url link -->
                             </div>
                         </div>
-        
-                        <div class="swiper-slide">
-        
-                            <h1>WEAR</h1>
-        
-                            <div class="mission_wrapper">
-        
-                                <img src="img/mission3.png" />
-        
-                                <div class="mission_desc">
-        
-                                    <p>
-                                    Join us with our eco-friendly Fashion Movement by supporting these stores! 
-                                    </p>
-        
-                                    <a>ZERO WASTE DANIEL</a>
-                                    <a>ECOALF</a>
-                                    <a>RE/DONE</a>
-                                </div>
+                    </div>
+
+                    <!-- SWIPER SLIDE #3 -->
+                    <div class="swiper-slide">
+                        <!-- this div is used to contain swiper slide elements: Title, and the Mission wrapper -->
+                        <!-- I used h1 to output the text title for this slide -->
+                        <h1>WEAR</h1> <!-- text title for the slide -->
+                        <!-- this div is to wrap this slide's image, and mission description -->
+                        <div class="mission_wrapper">
+                            <!-- mission wrapper div container -->
+                            <img src="img/mission3.png" /> <!-- image for this slide -->
+                            <!-- this div is for the mission description -->
+                            <div class="mission_desc">
+                                <!-- mission description div container -->
+                                <!-- I used p to output the paragraph for the mission's description -->
+                                <p>
+                                    Join us with our eco-friendly Fashion Movement by supporting these stores! <!-- mission description paragraph -->
+                                </p>
+                                <!-- Swiper Slides buttons: (each buttons directs user to their respective links)-->
+                                <a href="https://zerowastedaniel.com/" target="_blank">ZERO WASTE DANIEL</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="https://ecoalf.com/" target="_blank">ECOALF</a> <!-- a href allows this button to create a hyperlink to this url link -->
+                                <a href="https://shopredone.com/" target="_blank">RE/DONE</a> <!-- a href allows this button to create a hyperlink to this url link -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <h3>ALL THESE BECAUSE WE BELIEVE THAT OUR WORLD IS 'WEARTH' SAVING</h3>
-
         </div>
+        <!-- I used h3 to contain & output the ending text for my mission section -->
+        <h3>ALL THESE BECAUSE WE BELIEVE THAT OUR WORLD IS 'WEARTH' SAVING</h3> <!-- ending text for my mission section -->
+    </div>
 
-
-        <div class="tips">
-
-            <h3>HERE'S TOP <span style="color: #AFBBB8">EIGHT</span> THINGS YOU CAN DO TO SAVE THE PLANET</h3>
-            <p>
-                Earth is experiencing many environmental problems which have resulted from human activity. These problems includes global warming, air pollution and loss of habitats. Many scientists say that humans must change their attitudes and behaviours before it is too late so, here's 8 things you can do to help save our planet.
-            </p>
-
-            <div class="tips_wrapper">
-                <div class="tip">
-                    <img src="img/tip1.png">
-                    <h5>conserve water</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip2.png">
-                    <h5>try composting</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip3.png">
-                    <h5>live energy wise</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip4.png">
-                    <h5>be car conscious</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip5.png">
-                    <h5>plant a tree (or two)</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip6.png">
-                    <h5>give up plastics</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip7.png">
-                    <h5>reduce, reuse, recycle</h5>
-                </div>
-                <div class="tip">
-                    <img src="img/tip8.png">
-                    <h5>eat sustainable foods</h5>
-                </div>
+    <!-- This last main div is for the tips i wanted to share about saving our planet -->
+    <div class="tips"> <!-- tips div container -->
+        <!-- I used span for the word "EIGHT" to style it specifically and at the same time style it with the h3 stylings -->
+        <h3>HERE'S TOP <span style="color: #AFBBB8">EIGHT</span> THINGS YOU CAN DO TO SAVE THE PLANET</h3> <!-- title intro -->
+        <!-- I used p to output the paragraph for my tips' description -->
+        <p>
+            Earth is experiencing many environmental problems which have resulted from human activity. These problems includes global warming, air pollution and loss of habitats. <!--   _                          -->
+            Many scientists say that humans must change their attitudes and behaviours before it is too late so, here's 8 things you can do to help save our planet. <!--                 _|    my tips' description -->
+        </p>
+        <!-- this sub div is for wrapping my tips contents -->
+        <div class="tips_wrapper"> <!-- tips wrapper div -->
+            <!-- TIP #1 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip1.png"> <!-- image symbol -->
+                <h5>conserve water</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #2 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip2.png"> <!-- image symbol -->
+                <h5>try composting</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #3 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip3.png"> <!-- image symbol -->
+                <h5>live energy wise</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #4 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip4.png"> <!-- image symbol -->
+                <h5>be car conscious</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #5 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip5.png"> <!-- image symbol -->
+                <h5>plant a tree (or two)</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #6 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip6.png"> <!-- image symbol -->
+                <h5>give up plastics</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #7 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip7.png"> <!-- image symbol -->
+                <h5>reduce, reuse, recycle</h5> <!-- tip title -->
+            </div>
+            <!-- TIP #8 -->
+            <div class="tip"> <!-- this div is for containing the main tip contents: image symbol, and the tip title in text -->
+                <img src="img/tip8.png"> <!-- image symbol -->
+                <h5>eat sustainable foods</h5> <!-- tip title -->
             </div>
         </div>
+    </div>
 
-        <footer>
-            <h1>WEARTH</h1>
+    <!-- Fot my app's footer, I wanted to include a way of communication for my users to contact me -->
+    <footer>
+        <!-- I used h1 to output the text name of my website app -->
+        <h1>WEARTH</h1> <!-- name of my website -->
+        <!-- I used h3 to output the title intro of my website app -->
+        <h3>LET'S STAY CONNECTED</h3> <!-- title intro of my website app -->
+        <!-- I used p to output the paragraph for the contact's description -->
+        <p>
+            Any concerns, feedbacks, or suggestions? Send us a message through our email! <!-- contact's description -->
+        </p>
+        <!-- EMAIL FORM: for sending email -->
+        <form id="send_email" method="POST"> <!-- id for sendEmail.js purposes -->
+            <!-- I used input tag and attributes to allow user to input the needed requirement: -->
+            <input type="email" name="Email" placeholder="Email" required /> <!-- for EMAIL -->
+            <!-- textarea allows user to input message -->
+            <textarea name="Message" placeholder="Write your message here." required></textarea> <!-- for MESSAGE-->
+            <input type="text" name="Name" placeholder="Name" maxlength="25" required /> <!-- for NAME -->
+            <input type="text" name="Subject" placeholder="Subject" maxlength="50" required /> <!-- for SUBJECT -->
+            <input type="submit" name="Submit" value="SEND EMAIL" /> <!-- for BUTTON -->
+            <!-- I used p to output the message below (after the submit button is pressed) -->
+            <p id="message">Message Sent!</p> <!-- id for sendEmail.js purposes -->
+        </form>
+    </footer>
 
-            <h3>LET'S STAY CONNECTED</h3>
 
-            <p>
-                Any concerns, feedbacks, or suggestions? Send us a message through our email!
-            </p>
+    <!-- Swiper Scripts -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> <!--   _                             -->
+    <script src="javascript/swiperSettings.js"></script>                    <!--   _|  links for swiper scripts  -->
 
-            <form id="send_email" method="POST" >
-
-                <input type="email" name="Email" placeholder="Email" required/>
-
-                <textarea name="Message" placeholder="Write your message here." required></textarea>
-
-                <input type="text" name="Name" placeholder="Name" maxlength="25" required/>
-
-                <input type="text" name="Subject" placeholder="Subject" maxlength="50" required />
-
-                <input type="submit" name="Submit" value="SEND EMAIL" />
-
-                <p id="message">Message Sent!</p>
-            </form>
-        </footer>
-
-
-        <!-- Swiper Scripts -->
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="javascript/swiperSettings.js"></script>  
-
-        <!-- Send Email Scripts -->
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-        <script src="javascript/sendEmail.js"></script>
-    </body>
+    <!-- Send Email Scripts --> 
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script> <!--   _                                 -->
+    <script src="javascript/sendEmail.js"></script>                 <!--   _|  links for send email scripts  -->
+</body>
 </html>

@@ -1,226 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Julius+Sans+One&display=swap');
+/* SCSS File For Wearth website app */
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Julius+Sans+One&display=swap'); /* gfonts imported link */
 
-// MIXINS
+/* DEFINING VARIABLES ---------------------------------------------------------------------------------------------------------------- */
+$facts_count: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; /* count for facts arrangement */
+$fact_background-color: #133D3B, #255B59, #3A7573, #3C4C39, #67713C, #525E20, #943F15, #702500, #3A1401, #350D07; /* background colors for facts */
 
-@mixin mediaQueries ($minWidth, $maxWidth) { // $minWidth and $maxWidth is used to contain the media queries size requirements
-    @media screen and (min-width:$minWidth) and (max-width:$maxWidth) { // applies to screen as well
-        @content; // used to reduce repetitive code
+/* DEFINING MIXINS ------------------------------------------------------------------------------------------------------------------- */
+/* this mixin is for handling breakpoints for mediaqueries*/
+@mixin mediaQueries ($minWidth, $maxWidth) { /* $minWidth and $maxWidth is used to contain the media queries size requirements */
+    @media screen and (min-width:$minWidth) and (max-width:$maxWidth) { /* applies to screen as well */
+        @content; /* used to reduce repetitive code */
     }
 }
 
-// VARIABLES
-
-$facts_count: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-$fact_background-color: #133D3B, #255B59, #3A7573, #3C4C39, #67713C, #525E20, #943F15, #702500, #3A1401, #350D07;
-
-
-// SCSS
+/* DESIGNING THE WEBSITE APP ---------------------------------------------------------------------------------------------------------- */
+/* here I just removed unnecessary margin & padding to all my elements */
 * {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* border-box makes it much easier to size elements */
+    font-family: Arial, sans-serif; /* setting default font-family for the website app */
 }
-
+/* design for the body or the whole website app */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    margin: 0; /* to remove unwanted margin space */
+    padding: 0; /* to remove unwanted padding space */
+    overflow-x: hidden; /* to clip the content and no scrolling mechanism is provided */
 }
-
+/* design for the header */
 header {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 250px 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/mainBG.png') no-repeat center center;
-    background-size: cover;
-    color: white;
+    height: auto; /* setting height size */
+    width: 100%; /* setting width size */
+    margin: 0; /* setting margin size */
+    padding: 250px 0; /* setting padding size */
+    display: flex; /* using flex to display the elements in row */
+    text-align: center; /* align text contents to center */
+    justify-content: center; /* justify contents to center */
+    align-items: center; /* align items to center */
+    flex-direction: column; /* stacks the flex items into column */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/mainBG.png') no-repeat center center; /* adds transparent bg color, bg image, and bg img position */
+    background-size: cover; /* sets bg size to cover entire div */
+    color: white; /* setting font color */
 
+    /* header h1 (TITLE) */
     h1 {
-        -webkit-text-stroke: 3px white;
-        font-size: 110px;
-        letter-spacing: 14px;
-        text-shadow: 4px 4px 4px black;
-        margin: 0;
+        -webkit-text-stroke: 3px white; /* setting text stroke */
+        font-size: 110px; /* setting font-size */
+        letter-spacing: 14px; /* setting letter-spacing */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
+        margin: 0; /* setting margin size */
 
-        @include mediaQueries (501px, 675px) { 
-            font-size: 75px;
+        /* for min-width:501 max-width:675 */
+        @include mediaQueries (501px, 675px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 75px; /* setting font-size */
         }
-
-        @include mediaQueries (375px, 500px) { 
-            font-size: 60px;
+        /* for min-width:375 max-width:500 */
+        @include mediaQueries (375px, 500px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 60px; /* setting font-size */
         }
-
-        @include mediaQueries (0px, 375px) { 
-            font-size: 40px;
+        /* for min-width:0 max-width:375 */
+        @include mediaQueries (0px, 375px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 40px; /* setting font-size */
         }
     }
-
+    /* header p (DESCRIPTION) */
     p {
-        width: 60%;
-        font-family: 'Forum', cursive;
-        font-size: 24px;
-        line-height: 35px;
-        text-shadow: 2px 4px 2px black;
+        width: 60%; /* setting width size */
+        font-family: 'Forum', cursive; /* setting font-family */
+        font-size: 24px; /* setting font size */
+        line-height: 35px; /* setting line height size */
+        text-shadow: 2px 4px 2px black; /* setting text shadow */
 
-        @include mediaQueries (376px, 675px) { 
-            font-size: 20px;
+        /* for min-width:376 max-width:675 */
+        @include mediaQueries (376px, 675px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 20px; /* setting font-size */
         }
-
-        @include mediaQueries (0px, 375px) { 
-            font-size: 17px;
+        /* for min-width:0 max-width:375 */
+        @include mediaQueries (0px, 375px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 17px; /* setting font-size */
         }
     }
 }
-
+/* design for about us div */
 .about_us {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-
+    display: flex; /* using flex to display the elements in row */
+    justify-content: center; /* justify contents to center */
+    text-align: center; /* align text contents to center */
+    align-items: center; /* align items to center */
+    flex-direction: column; /* stacks the flex items into column */
+    background-color: black; /* setting bg color */
+    color: white; /* setting font color */
+    /* about_us h3 (TITLE) */
     h3 {
-        font-family: 'Julius Sans One', sans-serif;
-        font-size: 45px;
-        letter-spacing: 10px;
-        line-height: 55px;
-        width: 95%;
+        font-family: 'Julius Sans One', sans-serif; /* setting font family */
+        font-size: 45px; /* setting font size */
+        letter-spacing: 10px; /* setting letter spacing size */
+        line-height: 55px; /* setting letter height size */
+        width: 95%; /* setting width size */
 
-        @include mediaQueries (0px, 675px) { 
-            font-size: 30px;
-            line-height: 40px;
+        /* for min-width:0 max-width:675 */
+        @include mediaQueries (0px, 675px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 30px; /* setting font size */
+            line-height: 40px; /* setting letter height size */
         }
     }
-
+    /* about_us img (DID YOU KNOW) */
     img {
-        width: 60%;
-        height: auto;
-        margin-bottom: 75px;
+        width: 60%; /* setting width size */
+        height: auto; /* setting height size */
+        margin-bottom: 75px; /* setting margin bottom size */
 
-        @include mediaQueries (0px, 700px) { 
-            width: 80%;
+        /* for min-width:0 max-width:700 */
+        @include mediaQueries (0px, 700px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            width: 80%; /* setting width size */
         }
     }
-
+    /* design for fact div */
     .fact {
-        width: 90%;
-        display: flex;
-        border: 5px solid #FFFFFF;
-        border-radius: 120px;
-        text-align: center;
-        padding: 20px 0;
-        margin-bottom: 50px;
-
+        width: 90%; /* setting width size */
+        display: flex; /* using flex to display the elements in row */
+        border: 5px solid #FFFFFF; /* setting border */
+        border-radius: 120px; /* setting border radius */
+        text-align: center;  /* align text contents to center */
+        padding: 20px 0; /* setting padding size */
+        margin-bottom: 50px; /* setting margin bottom size */
+        /* design for left div (for aligning items left) */
         &.left {
-            flex-direction: row;
-
+            flex-direction: row;  /* formats the flex items into row */
+            /* design for fact info div */
             .fact_info {
-                text-align: left;
-                padding-right: 50px;
+                text-align: left; /* align text contents to left */
+                padding-right: 50px; /* setting padding size */
             }
 
-            @include mediaQueries (0px, 750px) { 
-                flex-direction: column;
-
+            /* for min-width:0 max-width:750 */
+            @include mediaQueries (0px, 750px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                flex-direction: column; /* stacks the flex items into column */
+                /* design for fact info div */
                 .fact_info {
-                    text-align: center;
-                    padding: 0;
+                    text-align: center; /* align text contents to center */
+                    padding: 0; /* setting padding size */
                 }
             }
         }
-
+        /* design for right div (for aligning items right) */
         &.right {
-            flex-direction: row-reverse;
-
+            flex-direction: row-reverse; /* formats the flex item into row w/ reverse effect (r-l)*/
+            /* design for fact info div */
             .fact_info {
-                text-align: right;
-                padding-left: 50px;
+                text-align: right; /* align text contents to right */
+                padding-left: 50px; /* setting padding left size */
             }
 
-            @include mediaQueries (0px, 750px) { 
-                flex-direction: column;
-
+            /* for min-width:0 max-width:750 */
+            @include mediaQueries (0px, 750px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                flex-direction: column; /* stacks the flex items into column */
+                /* design for fact info div */
                 .fact_info {
-                    text-align: center;
-                    padding: 0;
+                    text-align: center; /* align text contents to center */
+                    padding: 0;/* setting padding size */
                 }
             }
         }
-
+        /* fact h2 (TITLE NUMBER) */
         h2 {
-            display: flex;
-            justify-content: center;
-            font-size: 100px;
-            width: 30%;
-            margin: 40px 0;
-            text-shadow: 4px 4px 4px black;
-            align-items: center;
+            display: flex; /* using flex to display the elements in row */
+            justify-content: center; /* justify contents to center */
+            font-size: 100px; /* setting font size */
+            width: 30%; /* setting width size */
+            margin: 40px 0; /* setting margin size */
+            text-shadow: 4px 4px 4px black; /* setting text shadow */
+            align-items: center; /* align items to center */
 
-            @include mediaQueries (1001px, 1300px) { 
-                font-size: 75px;
+            /* for min-width:1001 max-width:1300 */
+            @include mediaQueries (1001px, 1300px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                font-size: 75px; /* setting font size */
             }
-
-            @include mediaQueries (751px, 1000px) { 
-                font-size: 50px;
+            /* for min-width:751 max-width:1000 */
+            @include mediaQueries (751px, 1000px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                font-size: 50px; /* setting font size */
             }
-
-            @include mediaQueries (375px, 750px) { 
-                width: 100%;
-                font-size: 50px;
+            /* for min-width:375 max-width:750 */
+            @include mediaQueries (375px, 750px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 100%; /* setting width size */
+                font-size: 50px; /* setting font size */
             }
-
-            @include mediaQueries (0px, 375px) { 
-                width: 100%;
-                font-size: 50px;
+            /* for min-width:0 max-width:375 */
+            @include mediaQueries (0px, 375px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 100%; /* setting width size */
+                font-size: 50px; /* setting font size */
             }
         }
 
         & > * {
-            width: 70%;
+            width: 70%; /* setting width size */
+            /* fact h5 (FACT TITLE) */
+            h5 { 
+                font-family: 'Julius Sans One', sans-serif; /* setting font family */
+                font-size: 25px; /* setting font size */
+                line-height: 27px; /* setting line height size */
+                letter-spacing: 5px; /* setting line spacing size */
+                color: #C98532; /* setting font color */
+                -webkit-text-stroke: 3px #C98532;; /* setting text stroke */
+                text-shadow: 4px 4px 2px black; /* setting text shadow */
+                margin-bottom: 0; /* setting margin bottom */
 
-            h5 {
-                font-family: 'Julius Sans One', sans-serif;
-                font-size: 25px;
-                line-height: 27px;
-                letter-spacing: 5px;
-                color: #C98532;
-                -webkit-text-stroke: 3px #C98532;;
-                text-shadow: 4px 4px 2px black;
-                margin-bottom: 0;
-
-                @include mediaQueries (375px, 1000px) { 
-                    font-size: 20px;
+                /* for min-width:375 max-width:1000 */
+                @include mediaQueries (375px, 1000px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 20px; /* setting font size */
                 }
-
-                @include mediaQueries (0px, 375px) { 
-                    font-size: 17px;
+                /* for min-width:0 max-width:375 */
+                @include mediaQueries (0px, 375px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 17px; /* setting font size */
                 }
             }
-
+            /* fact p (FACT DESCRIPTION) */
             p {
-                font-family: 'Forum', cursive;
-                font-size: 20px;
-                line-height: 22px;
-                letter-spacing: 5px;
+                font-family: 'Forum', cursive; /* setting font-family */
+                font-size: 20px; /* setting font size */
+                line-height: 22px; /* setting line height size */
+                letter-spacing: 5px; /* setting line spacing size */
 
-                @include mediaQueries (375px, 1000px) { 
-                    font-size: 17px;
+                /* for min-width:375 max-width:1000 */
+                @include mediaQueries (375px, 1000px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 17px; /* setting font size */
                 }
-
-                @include mediaQueries (0px, 375px) { 
-                    font-size: 15px;
+                /* for min-width:0 max-width:375 */
+                @include mediaQueries (0px, 375px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 15px; /* setting font size */
                 }
             }
 
-            @include mediaQueries (0px, 750px) { 
-                width: 90%;
+            /* for min-width:0 max-width:750 */
+            @include mediaQueries (0px, 750px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 90%; /* setting width size */
             }
         }
 
@@ -233,165 +244,173 @@ header {
             }
         }
 
-        @include mediaQueries (350px, 750px) { 
-            justify-content: center;
-            align-items: center;
-            padding: 40px 0;
+        /* for min-width:350 max-width:750 */
+        @include mediaQueries (350px, 750px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            justify-content: center; /* justify contents to center */
+            align-items: center; /* align items to center */
+            padding: 40px 0; /* setting padding size */
         }
-
-        @include mediaQueries (0px, 350px) { 
-            justify-content: center;
-            align-items: center;
-            padding: 40px 0;
-            border-radius: 20px;
+        /* for min-width:0 max-width:350 */
+        @include mediaQueries (0px, 350px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            justify-content: center; /* justify contents to center */
+            align-items: center; /* align items to center */
+            padding: 40px 0; /* setting padding size */
+            border-radius: 20px; /* setting border radius */
         }
     }
 }
-
+/* design for mission div */
 .mission {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/missionBG.png') no-repeat center center;
-    background-size: cover;
-    color: white;
-
+    width: 100%; /* setting width size */
+    display: flex; /* using flex to display the elements in row */
+    justify-content: center; /* justify contents to center */
+    text-align: center; /* align texts to center */
+    align-items: center; /* align items to center */
+    flex-direction: column; /* stacks the flex items into column */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/missionBG.png') no-repeat center center; /* adds transparent bg color, bg image, and bg img position */
+    background-size: cover; /* sets bg size to cover entire div */
+    color: white; /* setting font color */
+    /* mission h3 (TITLE) */
     h3 {
-        font-family: 'Julius Sans One', sans-serif;
-        font-size: 35px;
-        letter-spacing: 10px;
-        line-height: 65px;
-        -webkit-text-stroke: 1px white;
-        text-shadow: 4px 4px 4px black;
-        width: 90%;
+        font-family: 'Julius Sans One', sans-serif; /* setting font family */
+        font-size: 35px; /* setting font size */
+        letter-spacing: 10px; /* setting line spacing */
+        line-height: 65px; /* setting line height */
+        -webkit-text-stroke: 1px white; /* setting text stroke */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
+        width: 90%; /* setting width */
 
-        @include mediaQueries (0px, 650px) { 
-            font-size: 20px;
-            letter-spacing: 5px;
-            line-height: 40px;
+        /* for min-width:0 max-width:650 */
+        @include mediaQueries (0px, 650px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 20px; /* setting font size */
+            letter-spacing: 5px; /* setting line spacing */
+            line-height: 40px; /* setting line height */
         }
     }
-
+    /* design for mission swiper div */
     .mission_swiper{
-        width: 100%;
-        height: 600px;
-        margin-top: 75px;
-
+        width: 100%; /* setting width size */
+        height: 600px; /* setting height size */
+        margin-top: 75px; /* setting margin top size */
+        /* design for swiper div */
         .swiper {
-            width: 100%;
-            height: 600px;
-    
+            width: 100%; /* setting width size */
+            height: 600px; /* setting height size */
+            /* design for swiper wrapper and swiper slide */
             .swiper-wrapper .swiper-slide {
-
+                /* swiper wrapper and swiper slide h1 (TITLE) */
                 h1 {
-                    color: white;
-                    font-family: 'Julius Sans One', sans-serif;
-                    font-size: 90px;
-                    -webkit-text-stroke: white 7px;
-                    text-shadow: 7px 7px black;
-                    text-align: center;
-                    letter-spacing: 15px;
-                    margin: 0;
-                    margin-bottom: 40px;
+                    color: white; /* setting font color */
+                    font-family: 'Julius Sans One', sans-serif; /* setting font family */
+                    font-size: 90px; /* setting font size */
+                    -webkit-text-stroke: white 7px; /* setting text stroke */
+                    text-shadow: 7px 7px black; /* setting text shadow */
+                    text-align: center; /* align texts to center */
+                    letter-spacing: 15px; /* setting line spacing */
+                    margin: 0; /* setting margin size */
+                    margin-bottom: 40px; /* setting margin bottom size */
 
-                    @include mediaQueries (0px, 650px) { 
-                        font-size: 60px;
+                    /* for min-width:0 max-width:650 */
+                    @include mediaQueries (0px, 650px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                        font-size: 60px; /* setting font size */
                     }
                 }
 
+                /* design for mission wrapper div */
                 .mission_wrapper {
-                    width: 100%;
-                    height: 400px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
+                    width: 100%; /* setting width size */
+                    height: 400px; /* setting height size */
+                    display: flex; /* using flex to display the elements in row */
+                    justify-content: center; /* justify contents to center */
+                    align-items: center; /* align items to center */
+                    /* mission wrapper img (POLAROID) */
                     img {
-                        width: 40%;
-                        height: auto;
-                        object-fit: contain;
+                        width: 40%; /* setting width size */
+                        height: auto; /* setting height size */
+                        object-fit: contain; /* lets image keeps its aspect ratio, but resized it to fit within the given dimension */
 
-                        @include mediaQueries (0px, 850px) { 
-                            width: 45%;
+                        /* for min-width:0 max-width:850 */
+                        @include mediaQueries (0px, 850px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                            width: 45%; /* setting width size */
                         }
                     }
-
+                    /* design for mission description div */
                     .mission_desc {
-                        padding: 0 150px 0 20px;
-
+                        padding: 0 150px 0 20px; /* setting padding size */
+                        /* mission_desc p (DESCRIPTION) */
                         p {
-                            color: white;
-                            font-size: 20px;
-                            font-family: 'Forum', cursive;
-                            letter-spacing: 3px;
-                            line-height: 28px;
-                            margin: 0;
-                            margin-bottom: 40px;
-                            text-align: left;
+                            color: white; /* setting font color */
+                            font-size: 20px; /* setting font size */
+                            font-family: 'Forum', cursive; /* setting font family */
+                            letter-spacing: 3px; /* setting line spacing size */
+                            line-height: 28px; /* setting line height size */
+                            margin: 0; /* setting margin size */
+                            margin-bottom: 40px; /* setting margin bottom size */
+                            text-align: left; /* align texts to left */
 
-                            @include mediaQueries (350px, 850px) { 
-                                font-size: 17px;
+                            /* for min-width:0 max-width:850 */
+                            @include mediaQueries (350px, 850px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                                font-size: 17px; /* setting font size */
                             }
-
-                            @include mediaQueries (0px, 350px) { 
-                                font-size: 14px;
+                            /* for min-width:0 max-width:350 */
+                            @include mediaQueries (0px, 350px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                                font-size: 14px; /* setting font size */
                             }
                         }
-
+                        /* mission_desc p (BUTTONS FOR OPENING URL LINKS) */
                         a {
-                            display: block;
-                            width: 100%;
-                            padding: 7px 30px;
-                            border: 3px solid white;
-                            border-radius: 10px;
-                            box-shadow: 1px 1px black;
-                            font-family: 'Julius Sans One', sans-serif;
-                            font-size: 15px;
-                            letter-spacing: 2px;
-                            text-decoration: none;
-                            color: white;
-                            margin-bottom: 20px;
-
+                            display: block; /* display elements on block, starts on a new line, and takes up the whole width */
+                            width: 100%; /* setting width size */
+                            padding: 7px 30px; /* setting padding size */
+                            border: 3px solid white; /* setting border size */
+                            border-radius: 10px; /* setting border radius size */
+                            box-shadow: 1px 1px black; /* setting box shadow size */
+                            font-family: 'Julius Sans One', sans-serif; /* setting font family */
+                            font-size: 15px; /* setting font size */
+                            letter-spacing: 2px; /* setting letter spacing size */
+                            text-decoration: none; /* removes deocrations from items with anchor attribute */
+                            color: white; /* setting font color */
+                            margin-bottom: 20px; /* setting margin bottom size */
+                            /* design for a items hover */
                             &:hover {
-                                border-color: #EFB34C;
-                                background-color: #EFB34C;
-                                cursor: pointer;
+                                border-color: #EFB34C; /* setting border color */
+                                background-color: #EFB34C; /* setting bg color */
+                                cursor: pointer; /* changes cursor appearance */
                             }
-
+                            /* design for a items visited links */
                             &:visited {
-                                text-decoration: none;
-                                color: white;
+                                text-decoration: none; /* removes deocrations from items with anchor attribute */
+                                color: white; /* setting font color */
                             }
 
-                            @include mediaQueries (350px, 850px) { 
-                                font-size: 13px;
+                            /* for min-width:350 max-width:850 */
+                            @include mediaQueries (350px, 850px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                                font-size: 13px; /* setting font size */
                             }
-
-                            @include mediaQueries (0px, 350px) { 
-                                font-size: 11px;
+                            /* for min-width:0 max-width:350 */
+                            @include mediaQueries (0px, 350px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                                font-size: 11px; /* setting font size */
                             }
                         }
                     }
 
-                    @include mediaQueries (0px, 700px) { 
-                        flex-direction: column;
-                        justify-content: none;
-                        margin-top: 40px;
-                        height: 500px;
-                        
+                    /* for min-width:0 max-width:700 */
+                    @include mediaQueries (0px, 700px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                        flex-direction: column; /* stacks the flex items into column */
+                        justify-content: none; /* justify contents into none*/
+                        margin-top: 40px; /* setting margin top size */
+                        height: 500px; /* setting height size */
+                        /* design for mission desc img */
                         img {
-                            width: 80%;
-                            margin-bottom: 40px;
+                            width: 80%; /* setting width size */
+                            margin-bottom: 40px; /* setting margin bottom size */
                         }
-
+                        /* design for mission desc div */
                         .mission_desc {
-                            padding: 0 20px 0 20px;
-    
+                            padding: 0 20px 0 20px;  /* setting padding size */
+                            /* design for mission desc p */
                             p {
-                                text-align: center;
+                                text-align: center; /* align texts to center */
                             }
                         }
                     }
@@ -399,252 +418,262 @@ header {
             }
         }
 
-        @include mediaQueries (0px, 700px) { 
-            height: 700px;
-            
+        /* for min-width:0 max-width:650 */
+        @include mediaQueries (0px, 700px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            height: 700px; /* setting height size */
+            /* design for mission swiper */
             .swiper {
-                height: 700px;
+                height: 700px; /* setting height size */
             }
         }
     }
 }
-
+/* design for tips div */
 .tips {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/tipsBG.gif') no-repeat center center;
-    background-size: cover;
-    padding: 50px 0;
-
+    width: 100%; /* setting width size */
+    display: flex; /* using flex to display the elements in row */
+    justify-content: center; /* justify contents to center */
+    align-items: center; /* align items to center */
+    text-align: center; /* align texts to center */
+    flex-direction: column; /* stacks the flex items into column */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/tipsBG.gif') no-repeat center center; /* adds transparent bg color, bg image, and bg img position */
+    background-size: cover; /* sets bg size to cover entire div */
+    padding: 50px 0; /* setting padding size */
+    /* tips h3 (TITLE) */
     h3 {
-        width: 90%;
-        font-family: 'Julius Sans One', sans-serif;
-        font-size: 60px;
-        line-height: 80px;
-        color: #CA8533;
-        letter-spacing: 5px;
-        text-shadow: 4px 4px 4px black;
-        margin: 10px 0;
-
-        @include mediaQueries (0px, 700px) { 
-            font-size: 25px;
-            line-height: 40px;
+        width: 90%; /* setting width size */
+        font-family: 'Julius Sans One', sans-serif; /* setting font family */
+        font-size: 60px; /* setting font size */
+        line-height: 80px; /* setting line-height size */
+        color: #CA8533; /* setting font color */
+        letter-spacing: 5px; /* setting letter spacing size */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
+        margin: 10px 0; /* setting margin size */
+ 
+        /* for min-width:0 max-width:700 */
+        @include mediaQueries (0px, 700px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 25px; /* setting font size */
+            line-height: 40px; /* setting line-height size */
         }
     }
-
+    /* tips h3 (DESCRIPTION) */
     p {
-        font-family: 'Forum', cursive;
-        width: 90%;
-        font-size: 20px;
-        line-height: 35px;
-        letter-spacing: 3px;
-        color: white;
-        text-shadow: 4px 4px 4px black;
+        font-family: 'Forum', cursive; /* setting font family */
+        width: 90%; /* setting width size */
+        font-size: 20px; /* setting font size */
+        line-height: 35px; /* setting line-height size */
+        letter-spacing: 3px; /* setting letter spacing size */
+        color: white; /* setting font color */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
 
-        @include mediaQueries (250px, 700px) { 
-            font-size: 17px;
-            line-height: 25px;
+        /* for min-width:250 max-width:700 */
+        @include mediaQueries (250px, 700px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 17px; /* setting font size */
+            line-height: 25px; /* setting line-height size */
         }
-
-        @include mediaQueries (0px, 350px) { 
-            font-size: 14px;
-            line-height: 22px;
+        /* for min-width:0 max-width:350 */
+        @include mediaQueries (0px, 350px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 14px; /* setting font size */
+            line-height: 22px; /* setting line-height size */
         }
     }
-
+    /* design for tips wrapper div */
     .tips_wrapper {
-        width: 90%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-top: 100px;
-
+        width: 90%; /* setting width size */
+        display: flex; /* using flex to display the elements in row */
+        justify-content: space-around; /* items will have space before, between, and after them */
+        flex-wrap: wrap; /* wraps flexible items */
+        margin-top: 100px; /* setting margin size */
+        /* design for tip div */
         .tip {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 22%;
-            background-color: #AFBBB8;
-            border-radius: 40px;
-            margin-bottom: 100px;
-
+            display: flex; /* using flex to display the elements in row */
+            flex-direction: column; /* stacks the flex items into column */
+            justify-content: center; /* justify contents to center */
+            align-items: center; /* align items to center */
+            position: relative; /* element is positioned relative to its normal position */
+            width: 22%; /* setting width size */
+            background-color: #AFBBB8; /* setting bg color */
+            border-radius: 40px; /* setting border radius */
+            margin-bottom: 100px; /* setting margin-bottom size */
+            /* tip img (SYMBOL) */
             img {
-                width: 40%;
-                height: auto;
-                position: absolute;
-                top: -50px;
+                width: 40%; /* setting width size */
+                height: auto; /* setting height size */
+                position: absolute; /* element is positioned relative to its first positioned */
+                top: -50px; /* setting top size */
             }
-
+            /* tip img (TIP TITLE) */
             h5 {
-                width: 90%;
-                padding-top: 50px;
-                font-size: 25px;
-                line-height: 29px;
-                text-shadow: .5px .5px black;
-                letter-spacing: 8px;
+                width: 90%; /* setting width size */
+                padding-top: 50px; /* setting padding top size */
+                font-size: 25px; /* setting font size */
+                line-height: 29px; /* setting line-height size */
+                text-shadow: .5px .5px black; /* setting text shadow */
+                letter-spacing: 8px; /* setting letter spacing size */
 
-                @include mediaQueries (601px, 1200px) { 
-                    font-size: 20px;
-                    letter-spacing: 5px;
+                /* for min-width:601 max-width:1200 */
+                @include mediaQueries (601px, 1200px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 20px; /* setting font size */
+                    letter-spacing: 5px; /* setting letter spacing size */
                 }
-
-                @include mediaQueries (0px, 600px) { 
-                    font-size: 17px;
-                    letter-spacing: 3px;
+                /* for min-width:0 max-width:600 */
+                @include mediaQueries (0px, 600px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                    font-size: 17px; /* setting font size */
+                    letter-spacing: 3px; /* setting letter spacing size */
                 }
             }
 
-            @include mediaQueries (651px, 1200px) { 
-                width: 30%;
+            /* for min-width:651 max-width:1200 */
+            @include mediaQueries (651px, 1200px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 30%; /* setting width size */
             }
-
-            @include mediaQueries (376px, 650px) { 
-                width: 40%;
+            /* for min-width:376 max-width:650 */
+            @include mediaQueries (376px, 650px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 40%; /* setting width size */
 
                 img {
-                    width: 50%;
-                    top: -35px;
+                    width: 50%; /* setting width size */
+                    top: -35px; /* setting top size */
                 }
             }
 
-            @include mediaQueries (0px, 376px) { 
-                width: 100%;
+            /* for min-width:0 max-width:376 */
+            @include mediaQueries (0px, 376px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+                width: 100%; /* setting width size */
             }
         }
     }
 }
-
+/* design for footer */
 footer {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/mainBG.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 0;
-
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/mainBG.png') no-repeat center center; /* adds transparent bg color, bg image, and bg img position */
+    background-size: cover; /* sets bg size to cover entire div */
+    display: flex; /* using flex to display the elements in row */
+    justify-content: center; /* justify contents to center */
+    align-items: center; /* align items to center */
+    flex-direction: column; /* stacks the flex items into column */
+    text-align: center; /* align texts to center */
+    padding: 50px 0; /* setting padding size */
+    /* footer h1 (APP NAME) */
     h1 {
-        color:white;
-        -webkit-text-stroke: 3px white;
-        font-size: 50px;
-        letter-spacing: 14px;
-        text-shadow: 4px 4px 4px black;
-        margin: 0;
+        color:white; /* setting font color */
+        -webkit-text-stroke: 3px white; /* setting text stroke */
+        font-size: 50px; /* setting font size */
+        letter-spacing: 14px; /* setting letter spacing size */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
+        margin: 0; /* setting margin size */
 
-        @include mediaQueries (0px, 350px) { 
-            font-size: 30px;
+        /* for min-width:0 max-width:350 */
+        @include mediaQueries (0px, 350px) { /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 30px; /* setting font size */
         }
     }
-
+    /* footer h3 (INTRO) */
     h3 {
-        -webkit-text-stroke: 3px white;
-        font-family: 'Julius Sans One', sans-serif;
-        font-size: 30px;
-        line-height: 50px;
-        letter-spacing: 14px;
-        text-shadow: 4px 4px 4px black;
-        margin: 30px 0;
+        -webkit-text-stroke: 3px white; /* setting text stroke */
+        font-family: 'Julius Sans One', sans-serif; /* setting font family */
+        font-size: 30px; /* setting font size */
+        line-height: 50px; /* setting line-height size */
+        letter-spacing: 14px; /* setting letter spacing size */
+        text-shadow: 4px 4px 4px black; /* setting text shadow */
+        margin: 30px 0; /* setting margin size */
 
-        @include mediaQueries (0px, 350px) { 
-            font-size: 20px;
-        }
+        /* for min-width:0 max-width:350 */
+        @include mediaQueries (0px, 350px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            font-size: 20px; /* setting font size */
+        } 
     }
-
+    /* footer p (DESCRIPTION    ) */
     p {
-        font-family: 'Forum', cursive;
-        font-size: 17px;
-        line-height: 35px;
-        letter-spacing: 3px;
-        text-shadow: 2px 4px 2px black;
-        color: white;
-        margin: 0;
-        margin-bottom: 50px;
-        width: 95%;
+        font-family: 'Forum', cursive; /* setting font family */
+        font-size: 17px; /* setting font size */
+        line-height: 35px; /* setting line-height size */
+        letter-spacing: 3px; /* setting letter spacing size */
+        text-shadow: 2px 4px 2px black; /* setting text shadow */
+        color: white; /* setting font color */
+        margin: 0; /* setting margin size */
+        margin-bottom: 50px; /* setting margin bottom size */
+        width: 95%; /* setting width size */
     }
-
+    /* design for footer form */
     form {
-        width: 50%;
+        width: 50%; /* setting width size */
     }
-    
+    /* design for form input (EMAIL) */
     input[type=email], input[type=text] {
-        width: 48.5%;
-        padding: 10px 15px;
-        background-color: transparent;
-        color: white;
-        border: 5px solid white;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        float: left;
+        width: 48.5%; /* setting width size */
+        padding: 10px 15px; /* setting padding size */
+        background-color: transparent; /* setting bg color */
+        color: white; /* setting font color */
+        border: 5px solid white; /* setting border */
+        letter-spacing: 2px; /* setting letter spacing size */
+        margin-bottom: 15px; /* setting lmargin bottom size */
+        float: left; /* float item to left */
 
-        @include mediaQueries (0px, 650px) { 
-            width: 100%;
+        /* for min-width:0 max-width:650 */
+        @include mediaQueries (0px, 650px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            width: 100%; /* setting width size */
         }
     }
-    
+    /* design for form textarea (MESSAGES) */
     textarea {
-        width: 48.5%;
-        background-color: transparent;
-        color: white;
-        border: 5px solid white;
-        padding: 5px 10px;
-        resize: none;
-        height: 190px;
-        letter-spacing: 2px;
-        line-height: 25px;
-        margin-bottom: 15px;
-        float: right;
+        width: 48.5%; /* setting width size */
+        background-color: transparent; /* setting bg color */
+        color: white; /* setting font color */
+        border: 5px solid white; /* setting border */
+        padding: 5px 10px; /* setting padding size */
+        resize: none; /* sets resize to none */
+        height: 190px; /* setting height size */
+        letter-spacing: 2px; /* setting letter spacing size */
+        line-height: 25px; /* setting line-height size */
+        margin-bottom: 15px; /* setting lmargin bottom size */
+        float: right; /* float item to right */
 
-        @include mediaQueries (0px, 650px) { 
-            width: 100%;
+        /* for min-width:0 max-width:650 */
+        @include mediaQueries (0px, 650px) {  /* using the mediaQueries mixin to store the required $minWidth & $maxWidth */
+            width: 100%; /* setting width size */
         }
     }
-
+    /* design for form input placeholder (TYPES: EMAIL, TEXT, & TEXTAREA) */
     input[type=email]::placeholder, input[type=text]::placeholder, textarea::placeholder {
-        font-size: 14px;
-        text-shadow: 2px 4px 2px black;
-        color: white;
+        font-size: 14px; /* setting font size */
+        text-shadow: 2px 4px 2px black; /* setting text shadow */
+        color: white; /* setting font color */
     }
-
+    /* design for form input focus (TYPES: EMAIL, TEXT, & TEXTAREA) */
     input[type=email]:focus, input[type=text]:focus, textarea:focus {
-        border-color: #C98532;
-        outline: none;
+        border-color: #C98532; /* setting border color */
+        outline: none; /* sets outline as none */
     }
-
+    /* design for form input submit button (TYPES: SUBMIT) */
     input[type=submit] {
-        font-family: 'Forum', cursive;
-        color: black;
-        background-color: #C98532;
-        padding: 5px 30px;
-        margin-top: 30px;
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: 3px;
-        line-height: 30px;
-        border: none;
-        float: left;
-        border-radius: 20px;
-
+        font-family: 'Forum', cursive; /* setting font family */
+        color: black; /* setting font color */
+        background-color: #C98532; /* setting bg color */
+        padding: 5px 30px; /* setting padding size */
+        margin-top: 30px; /* setting margin top size */
+        font-size: 17px; /* setting font size */
+        font-weight: 600; /* setting font weight */
+        letter-spacing: 3px; /* setting letter spacing size */
+        line-height: 30px; /* setting line-height size */
+        border: none; /* sets border as none */
+        float: left; /* float item to left */
+        border-radius: 20px; /* sets border radius size */
+        /* design for submit button hover */
         &:hover {
-            cursor: pointer;
-            background-color: #EFB34C;
-        }
+            cursor: pointer; /* changes cursor */
+            background-color: #EFB34C; /* setting bg color */
+        } 
     }
-
+    /* design for output message below (after the submit button is pressed) */
     p#message {
-        float: left;
-        margin: 35px 0 0 20px;
-        color: #C98532;
-        display: none;
-
+        float: left; /* float item to left */
+        margin: 35px 0 0 20px; /* setting margin top size */
+        color: #C98532; /* setting font color */
+        display: none; /* hide and show elements without deleting and recreating them (through the use of javascript) */
+        /* design for p when active */
         &.active{
-            display: block;
+            display: block; /* display elements on block, starts on a new line, and takes up the whole width */
         }
     }
 }
